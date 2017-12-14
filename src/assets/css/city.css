@@ -1,0 +1,62 @@
+#citybox{
+   background:#fff;
+}
+#citybox h2{
+    line-height: .44rem;
+    font-size: .16rem;
+    text-align: center;
+    position: relative;
+}
+#citybox h2 a{
+  float: left;
+  position: absolute;
+  left:.18rem;
+  top:.05rem;
+  width: .11rem;
+  height: .18rem;
+
+}
+#citybox h2 a img{
+  width: 100%
+}
+.ctlist {
+  width: 100%;
+}
+.ctlist dt{
+     line-height: .2rem;
+     text-indent: .15rem;
+     background:  #f1f3f6;
+     color: #757f89;
+}
+.ctlist dd{
+     background:  #fcfcfc;
+}
+.ctlist dd a{
+  display: block;
+  height: 100%;
+  width: 93%;
+  margin: 0 auto;
+  text-indent: .02rem;
+  border-bottom: 1px solid #f1f2f4;
+  line-height: .5rem;
+  font-size: .15rem;
+}
+#citybox .ctlist dd:last-of-type a{
+  border: 0;
+}
+.ctright{
+  width: .2rem;
+  position: fixed;
+  right:0;
+  top:0;
+  text-align: center;
+  padding-top: 30%;
+  height: 100%;
+  font-size: .13rem;
+  background: rgba(253, 253, 253, 0.5);
+}
+.ctright a{
+  display: block;
+  font-size: .13rem;
+  text-align: center;
+}

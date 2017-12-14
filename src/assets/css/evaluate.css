@@ -1,0 +1,309 @@
+
+html{
+	font-family: Arial,"Microsoft Yahei",sans-serif;
+    font-size: 100px;
+    margin: 0 auto;
+}
+body{
+    margin: 0;
+    font-size: .14rem;
+    background: #f5f5f5;
+    font-weight: 300;   
+}
+/*头部*/
+.nav{
+    background: #fff;
+    color: #75a739;
+    height: .45rem;
+    line-height: .43rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;    
+    display: box;
+    border-bottom: .01rem solid #d8d8d8;
+    z-index: 1;
+}
+.back{
+    width: .88rem;
+    display: inline-block;
+    position: absolute;
+    left:0;
+    top: auto;
+}
+.back>a{
+    text-align: center;
+    padding-left: .07rem;
+    float: left;
+    width: .4rem;
+    color: #75a739;
+    font-size: .22rem;
+    font-family: 宋体;
+    font-weight: bold;
+}
+.tab{
+    text-align: center;
+    width: 100%;
+    position: fixed;
+}
+.tab-menu{
+    font-size: .16rem;
+    text-align: center;
+    color: #3a3a3a;
+    width: 100%;
+}
+.tab-menu li{
+    margin: 0 .06rem;
+    height: .43rem;
+    line-height: .45rem;
+    display: inline-block;
+   
+}
+.active1{
+    border-bottom: .02rem solid #65a032;
+    color: #65a032;    
+}
+.more{
+    position: absolute;
+    width: .8rem;
+    margin-right: .08rem;
+    text-align: right;
+    right: 0;
+
+}
+.more-inicon{
+    display: inline-block;
+    width: .2rem;
+    height: .1rem;
+    background: url(../img/more.bmp);
+    background-size: 100% 100%;
+}
+
+/*身体*/
+.main{
+    padding-bottom: .45rem;
+    margin-top: .46rem;
+}
+.good-comment-star dl{
+    padding: .2rem .1rem;
+    height: .56rem;
+    background: white;
+}
+.good-comment-star dl dt{
+    float: left;
+    width: .56rem;
+    height: .4rem;
+    padding: .08rem 0;
+    margin-right: .3rem;
+    border-radius: 100%;
+    background: #ff8000;
+    font-size: .16rem;
+    color: #fff;
+    text-align: center;
+}
+.good-comment-star dl dt span{
+    display: block;
+}
+.good-comment-star dl dd{
+    float: left;
+    width: 2.05rem;
+}
+.good-comment-star dl dd div{
+    height: .24rem;
+    line-height: .24rem;
+}
+.good-comment-star dl dd div span{
+    float: left;
+}
+.good-comment-star dl dd div:first-child{
+    margin-bottom: .08rem;
+}
+.good-comment-star dl dd div img{
+    float: left;
+    margin-left: .15rem;
+    margin-top: .02rem;
+    width: .2rem;
+    height: .2rem;
+}
+
+
+
+.comment-tab-menu{
+    padding: .2rem 0;
+    border-top: .01rem solid #d8d8d8;
+    border-bottom: .01rem solid #d8d8d8;
+    background: #fff;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+.comment-tab-menu ul{
+    border: .01rem solid #ff8000;
+    border-radius: .06rem;
+}
+.comment-tab-menu ul li{
+    display: inline-block;
+    min-width: 1rem;
+    height: .32rem;
+    padding: 0 .05rem;
+    line-height: .32rem;
+    color: #ff8000;
+    text-align: center;
+}
+.active{
+    background: #ff8000;
+    color: #fff;
+}
+
+/*商品评价部分*/
+.tips{
+    height: .16rem;
+    padding: .15rem .1rem;
+    font-size: .12rem;
+    line-height: .16rem;
+    color: #878787;
+}
+.tips i{
+    display:inline-block;
+    width: .17rem;
+    height: .17rem;
+    background: url(../img/duihao1.bmp);
+    background-size: 100% 100%;
+    margin: 0 .04rem 0 .02rem;
+    float: left;
+}
+.comment-item{
+    padding: .1rem 0;
+    margin-bottom: .1rem;
+    background: #fff;
+}
+.comment-con-chief{
+    margin-left: .1rem;
+    padding: .15rem .1rem .15rem 0;
+    color: #3a3a3a;
+    clear: both;
+}
+.top{
+    padding: 0 .1rem .15rem 0;
+}
+.comment-con-chief img{
+    float: left;
+    width: .56rem;
+    height: .56rem;
+    margin: .08rem .08rem 0 0;
+}
+.comment-info{
+    height: .36rem;
+    line-height: .36rem;
+}
+.comment-info>img{
+    float: left;
+    width: .36rem;
+    height: .36rem;
+    margin-right: .15rem;
+    border-radius: 100%;
+}
+.comment-info .user{
+    float: left;
+    margin-right: .05rem;
+    font-size: .14rem;
+}
+.comment-info i{
+    width: .14rem;
+    height: .16rem;
+    display: inline-block;
+    background: url(../img/v2.bmp);
+    background-size: 100% 100%;
+    margin: .11rem 0 0 0;
+}
+.comment-info .date{
+    float: right;
+    font-size: .13rem;
+    color: #878787;
+}
+.comment-level{
+    height: .3rem;
+    font-size: .13rem;
+    line-height: .3rem;
+    color: #878787;
+}
+.comment-level span{
+    display: inline-block;
+    margin-right: .3rem;
+}
+.comment-msg{
+    font-size: .15rem;
+    line-height: .2rem;
+}
+/*脚部*/
+.footer{
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 -2px 2px 0 rgba(0,0,0,.15);
+    background: #fff;
+    height: .45rem;
+    font-size: .18rem;
+    line-height: .45rem;
+    text-align: center;
+}
+.cart-btn{
+    top: auto;
+    right: auto;
+    bottom: .05rem;
+    left: .05rem;
+    position: absolute;
+    background: #65a032;
+    text-align: center;
+    color: #fff;
+    width: .5rem;
+    height: .5rem;
+    line-height: .5rem;
+    border-radius: 100%;
+}
+.cart-btn i{
+    width: .31rem;
+    height: .25rem;
+    background: url(../img/car.bmp);
+    background-size: 100% 100%;
+    display: block;
+    position: absolute;
+    left: .1rem;
+    bottom: .13rem;
+}
+.cart-btn span{
+    background: #ff8000;
+    line-height: .14rem;
+    border-radius: .15rem;
+    min-width: .14rem;
+    padding: 0 .02rem;
+    top: .03rem;
+    right: auto;
+    bottom: auto;
+    left: .35rem;
+    position: absolute;
+    color: #fff;font-size: .12rem;
+}
+.add-cart{
+    float: right;
+    width: 1.8rem;
+    background: #ff8000;
+    font-size: .18rem;
+    line-height: .46rem;
+    color: #fff;
+}
+.add-cart span{
+    display: inline-block;
+    font-size: .14rem;
+    color: rgba(255,255,255,.8);
+    line-height: .46rem;
+    padding-right: .1rem;
+}
+.add-cart em{
+    font-style: normal;
+    font-size: .18rem;
+    line-height: .46rem;
+    color: #fff;
+}

@@ -1,0 +1,135 @@
+html,body{
+		width: 100%;
+		height: 100%;
+		background: #f5f5f5;
+	}
+	*{
+		font-family: Arial,"Microsoft Yahei",sans-serif;
+	}
+	.address-top{
+		width: 100%;
+		height: 0.45rem;
+		border-bottom: .01rem solid #d8d8d8;
+		background: #fff;
+		position: relative;
+		line-height: 0.45rem;		
+	}
+	.text{
+		width: 100%;
+		height: 100%;
+		color: #75a739;
+		text-align: center;
+	    font-size: .17rem;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+
+	}
+	.back a{
+		display: block;
+		font-size: .23rem;
+		font-family: "宋体";
+		padding-left: 0.15rem;
+		color: #75a739;
+		font-weight: bold;	
+	}
+	.back{
+		box-sizing: border-box;
+		position: absolute;
+		width: 0.45rem;
+		height: 0.45rem;
+		left:0;
+		top:0;
+			
+
+	}
+	.address-info{
+		padding: 0 .1rem;
+	    background-color: #fff;
+	}
+	.form{
+		width: 100%;
+	    height: .44rem;
+	    font-size: .15rem;
+	    display: flex;
+	    line-height: .44rem;
+	}
+	.form:not(:last-of-type) {
+    	border-bottom: 1px solid #d8d8d8;
+	}
+	.form>span{
+		display: inline-block;
+    	width: .85rem;
+    	font-size: .15rem;
+	}
+	.input-box{
+		flex: 1;
+		padding-left: .1rem;
+		font-size: .15rem
+	}
+	.input-box input{
+		width: 90%;
+	    height: .4rem;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    line-height: normal;
+	    text-align: left;
+	    border: none;
+	    outline: 0;
+	    background-color: transparent
+	}
+	.input-box textarea{
+		border: none;
+		width: 90%;
+	    outline: 0;
+	    background-color: transparent;
+	    word-wrap: break-word;
+	    margin-top: .02rem;
+	    padding: .09rem 0;
+	    height: auto;
+	    resize: none
+	}
+	input::-webkit-input-placeholder{
+		font-size: .15rem;
+	}
+	textarea::-webkit-input-placeholder{
+		font-size: .15rem;
+		font-family:  Arial,"Microsoft Yahei",sans-serif;
+	}
+	.input-box span{
+		margin-right: .23rem;
+		height: .42rem;
+	    line-height: .42rem;
+	    display: inline-block;
+	}
+	.input-box span i{
+		display: inline-block;
+		width: .2rem;
+	    height: .2rem;
+	    border: 1px solid #d8d8d8;
+	    border-radius: 50%;
+	    color: #fff;
+	    margin: .09rem .08rem 0 0;
+	    text-align: center;
+	    font-size: .17rem;
+	    float: left;
+	}
+	.input-box span em{
+		float: left;
+	}
+	.btnBox{
+		width: 100%;
+		display: flex;
+		padding-top: .3rem
+	}
+	.btn{
+		width: 78.6%;
+	    border-radius: .06rem;
+	    margin: auto;
+	    background-color: #bfbfbf;
+	    font-size: .17rem;
+	    color: #fff;
+	    padding: .12rem .2rem;
+	    text-align: center
+	}

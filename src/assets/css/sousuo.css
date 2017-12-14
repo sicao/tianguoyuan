@@ -1,0 +1,236 @@
+html{
+    font-family: Arial,"Microsoft Yahei",sans-serif;
+    font-size: 100px;
+    margin: 0 auto;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body{
+    margin: 0;
+    font-size: .14rem;
+    background: #f5f5f5;
+    font-weight: 300;
+}
+#search{
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 999
+}
+.modal .search-box{
+    background: #fff;
+}
+.modal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 90;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    width: 100%;
+}
+.m-component-nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.modal .m-component-nav{
+    background-color: #fff;
+    border-bottom: 1px solid #d8d8d8;
+    padding: .1rem 0;
+    height: auto;
+    -webkit-box-align: center;
+}
+.modal .m-component-nav .navbar-header{
+    color: #64a131;
+    font-size: .14rem;
+    width: auto;
+    height: .32rem;
+    margin-right: .06rem;
+    float: left;
+    padding-top: .07rem;
+}
+.modal.search-box .m-component-nav .navbar-header i{
+    font-size: .2rem;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+.iconfont{
+    font-family: 宋体;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+}
+.modal .searchbar{
+    box-sizing: border-box;
+    position: relative;
+    background-color: #eee;
+    border-radius: .05rem;
+    color: #878787;
+    font-size: .14rem;
+    display: -webkit-box;
+    -webkit-box-flex: 1;
+    width: 70%;
+    height: .4rem;
+    float: left;
+}
+.searchbar img{
+    padding-left: .08rem;
+    width: .25rem;
+    padding-top: .08rem;
+    display: inline-block;
+}
+.searchbar .dajing{
+    position: absolute;
+    top: 0.03rem;
+    left: 0.05rem;
+    width: auto;
+}
+.modal input{
+    background-color: transparent;
+    border: medium none;
+    outline: medium none;
+    -webkit-appearance: none;
+    line-height: normal;
+}
+.modal .searchbar input[type=text]{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    padding: 0 0 0 .4rem;
+    height: .4rem;
+    vertical-align: super;
+    line-height: .4rem;
+}
+.sub-btn{
+    box-sizing: border-box;
+    height: .38rem;
+    line-height: .38rem;
+    color: #64a131;
+    font-size: .16rem;
+    padding: 0 .06rem;
+    white-space: nowrap;
+    float: left;
+    padding-left: .15rem;
+}
+.keyword{
+    width: 90%;
+    margin: auto;
+    padding-top: .15rem;
+}
+.da{
+    position: relative;
+    top: .62rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.remen{
+    color: #878787;
+    margin-bottom: .05rem;
+}
+.con a{
+    color: #3a3a3a;
+    display: inline-block;
+    padding: .07rem .08rem;
+    margin: .1rem .04rem 0;
+    background-color: #f1f1f1;
+    border-radius: .05rem;
+    max-width: 1.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.item-0-6{
+    width: 100%;
+    overflow: hidden;
+}
+.item-0-6 div{
+     float: left;
+     width: 45%;
+}
+.item-0-6 .desc{
+    width:50%;
+}
+.img-box{
+    padding-left: .03rem;
+}
+.img-box img{
+    width: 100%;
+}
+.desc1{
+    text-align: left;
+    margin-left: .05rem;
+    margin-top: .2rem;
+}
+.desc1 h5{
+    font-size: .17rem;
+    margin-bottom: .05rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #3a3a3a;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.desc1 p{
+    color: #878787;
+    padding-top: .03rem;
+    text-align: justify;
+    margin: 0;
+}
+.desc1 .pt{
+    display: block;
+    color: #ff8000;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: .37rem;
+}
+.desc1 .pt span{
+    font-size: .1rem;
+    width: .9rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+.desc1 .pt img{
+    float: right;
+    padding-right: .1rem;
+}
+.item-0-6 .desc .xin span{
+    width: auto;
+    background: #ff8000;
+    color: white;
+}
+.item-0-6 .desc .xin{
+    margin-top: .05rem;
+}
+.item-0-6 .desc .xin2{
+    margin-top: .5rem;
+    font-size: .1rem;
+}
+.tutu{
+    border-bottom: .01rem solid #d8d8d8;
+    display: none;
+}
+.searchbar .tio{
+    padding-top: 0;
+    padding-left: 0;
+    position: absolute;
+    top: .07rem;
+    right: 0;
+    display: none;
+}
