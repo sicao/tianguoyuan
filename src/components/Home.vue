@@ -289,7 +289,7 @@
                     autoplay:1000,//自动切换的时间间隔
                     onSlideChangeEnd: swiper => { //滑动之后回调函数
                         //切换结束时，告诉我现在是第几个slide
-                        console.log('onSlideChangeEnd', swiper.realIndex)
+                        // console.log('onSlideChangeEnd', swiper.realIndex)
                     }               
                 }   
             }
