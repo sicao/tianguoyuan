@@ -5,12 +5,12 @@
 		</header>
 		<div class="content1">
 			<ul class="tab">
-				<li v-for="(item,index) in classOneGroup">{{item.name}}</li>
+				<li v-for="(item,index) in classOneGroup" :key="item.id" @click="show(index)">{{item.name}}</li>
 			</ul>
-			<div class="item">
+			<div class="item" >
 				<h2>果园优选<span class="more">全部 <i>></i></span></h2>
 				<div class="items">
-					<dl v-for="item in childrenList">
+					<dl v-for="item in childrenList" :key="item.id">
 						<dt><img :src="item.class_photo"></dt>
 						<dd>{{item.name}}</dd>
 					</dl>
@@ -28,14 +28,18 @@
 			}
 		},
 		created(){		
-			var _t =this;
-			this.axios.get("../static/tablist.json",{
+			this.axios.get("../static/kindData.json",{
 		
-			}).then(function(res){
-			console.log(res.data)
-			_t.classOneGroup=res.data.data.classOneGroup;
-			_t.childrenList=res.data.data.childrenList[0].class3Group
+			}).then((res) => {
+			this.classOneGroup=res.data.data.classOneGroup;
+			this.childrenList=res.data.data.childrenList;
+			console.log(this.childrenList);
 			});
+		},
+		methods:{
+			show(index){
+				console.log(index);
+			}
 		}
 	}
 
