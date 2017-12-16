@@ -8,7 +8,7 @@
 				<li v-for="(item,index) in classOneGroup" :key="item.id" @click="show(index)">{{item.name}}</li>
 			</ul>
 			<div class="item" >
-				<h2>果园优选{{itemIndex}}<span class="more">全部 <i>></i></span></h2>
+				<h2>{{childrenList[itemIndex].class2Name.name}}<span class="more">全部 <i>></i></span></h2>
 				<div class="items">
 					<dl v-for="item in class3Group" :key="item.id">
 						<dt><img :src="item.class_photo"></dt>
@@ -36,7 +36,7 @@
 			this.classOneGroup=res.data.data.classOneGroup;
 			this.childrenList=res.data.data.childrenList;
 			this.class3Group = this.childrenList[this.itemIndex].class3Group;
-			console.log(this.class3Group);
+			console.log(this.childrenList);
 			});
 		},
 		methods:{
