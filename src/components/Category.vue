@@ -10,7 +10,7 @@
 			<div class="item" >
 				<h2>果园优选{{itemIndex}}<span class="more">全部 <i>></i></span></h2>
 				<div class="items">
-					<dl v-for="item in childrenList" :key="item.id">
+					<dl v-for="item in class3Group" :key="item.id">
 						<dt><img :src="item.class_photo"></dt>
 						<dd>{{item.name}}</dd>
 					</dl>
@@ -25,7 +25,8 @@
 			return{
 				classOneGroup:[],
 				childrenList:[],
-				itemIndex: 0
+				itemIndex: 0,
+				class3Group: []
 			}
 		},
 		created(){		
@@ -34,13 +35,15 @@
 			}).then((res) => {
 			this.classOneGroup=res.data.data.classOneGroup;
 			this.childrenList=res.data.data.childrenList;
-			console.log(this.childrenList);
+			this.class3Group = this.childrenList[this.itemIndex].class3Group;
+			console.log(this.class3Group);
 			});
 		},
 		methods:{
 			show(index){
 				this.itemIndex = index;
-				console.log(this.itemIndex);
+				this.class3Group = this.childrenList[this.itemIndex].class3Group;
+				console.log(this.class3Group);
 			}
 		}
 	}
