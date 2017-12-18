@@ -2,9 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/Home'
-import Cart from '@/components/Cart'
 import Category from '@/components/Category'
+
+
+import Cart from '@/components/Cart'
+
 import Mine from '@/components/Mine'
+import Personal from '@/components/Personal'
+
+import Login from '@/components/Login'
 import Detail from '@/components/Detail'
 import Citybox from '@/components/Citybox'
 
@@ -34,17 +40,27 @@ export default new Router({
       component: Category
     },
     {
+      path:'/login',
+      name:'login',
+      component:Login
+    },
+    {
       path:'/mine',
       name:'mine',
       component:Mine
     },
+    ,{
+      path:'/personal',
+      name:'personal',
+      component:Personal
+    },
     {
       path:'/detail',
-      name:'/detail',
+      name:'detail',
       component:Detail
     },{
       path:'/citybox',
-      name:'/citybox',
+      name:'citybox',
       component:Citybox
     }
   ]

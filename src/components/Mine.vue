@@ -1,5 +1,5 @@
 <template>
-	<div>			
+	<div>
 		<!-- 头部 -->
 		<div class="mineindent_header">
 			<div class="avart-wrapper">
@@ -10,14 +10,14 @@
 					</span>
 				</div>
 				<div class="left member_name">
-					<h2>15811021102</h2>
+					<h2><router-link to="/personal">15510269873</router-link></h2>
 					<a href="###" class="sign">签到送好礼</a>
 				</div>
 				<a href="###" class="twodi-code">
 					<i></i>
 					<span class="name_hy">会员码</span>
-				</a>			
-			</div>	
+				</a>
+			</div>
 			<ul class="preferential">
 				<li>
 					<a href="###">
@@ -102,7 +102,7 @@
 
 </template>
 <script>
-	
+
 </script>
 <style scoped>
 	@import '../assets/css/mineindent.css'

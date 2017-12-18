@@ -8,21 +8,21 @@
 				<li class="active1">商品</li>
 				<li>详情</li>
 				<li>评价</li>
-			</ul>			
+			</ul>
 		</div>
 		<div class="more1">
 			<i class="more-inicon"></i>
 			<div></div>
-			<div></div>			
+			<div></div>
 		</div>
-	</div>	
+	</div>
 	<!-- 身体 -->
 	<div class="main1">
 		<!-- 商品轮拔图 -->
 		<div class="detail" v-for="item in proList">
 			<div class="SPbanner">
 				<ul class="picList">
-					<li><img :src="item.image"></li>				
+					<li><img :src="item.image"></li>
 				</ul>
 				<div class="picListball">
 					<span></span>
@@ -44,7 +44,7 @@
 					</span>
 					<em>最快明天09:00-18:00送达</em>
 				</div>
-				<h5>单重1000-1250g</h5>			
+				<h5>单重1000-1250g</h5>
 			</div>
 		</div>
 		<!-- 送货至 -->
@@ -57,7 +57,7 @@
 			<span><i></i><em>48小时退换货</em></span>
 			<span><i></i><em>全程冷链</em></span>
 			<span><i></i><em>果园标准</em></span>
-			<span><i></i><em>全球直采</em></span>			
+			<span><i></i><em>全球直采</em></span>
 		</div>
 		<!-- 商品评价部分 -->
 		<div class="comment-item">
@@ -67,7 +67,7 @@
 					好评
 					<i>></i>
 				</span>
-				<p>评价(6374)</p>				
+				<p>评价(6374)</p>
 			</div>
 			<div class="comment-con-chief">
 				<div class="comment-info">
@@ -107,7 +107,7 @@
 				<p class="comment-msg">必须好评，这个价格没的说，口感更是没的说</p>
 			</div>
 		</div>
-	</div>	
+	</div>
 	<!-- 脚部 -->
 	<div class="footers">
 		<a href="###" class="cart-btn">
@@ -118,7 +118,7 @@
 			<span>明日达</span>
 			<em>加入购物车</em>
 		</a>
-		
+
 	</div>
 	</div>
 </template>
@@ -135,8 +135,6 @@
 		methods:{
 			back(){
 				history.back();
-                this.$store.dispatch("empty");
-           
 			}
 		}
 	}

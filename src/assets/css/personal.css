@@ -8,10 +8,10 @@ body{
     margin: 0;
     font-size: .14rem;
     background: #f5f5f5;
-    font-weight: 300;   
+    font-weight: 300;
 }
 /*头部*/
-.nav{
+.nav5{
     background: #fff;
     color: #75a739;
     height: .45rem;
@@ -20,15 +20,15 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    display: -webkit-box;    
+    display: -webkit-box;
     display: box;
     border-bottom: .01rem solid #d8d8d8;
 }
-.back{
+.back5{
     width: .88rem;
     display: inline-block;
 }
-.back>a{
+.back5>a{
     text-align: center;
     padding-left: .07rem;
     float: left;
@@ -38,15 +38,15 @@ body{
     font-family: 宋体;
     font-weight: bold;
 }
-.text{
-    text-indent: .8rem;
+.text5{
+    text-indent: .7rem;
     font-size: .17rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;width:100%;
 }
 /*身体*/
-.main{
+.main5{
     text-align: center;
     margin-top: .46rem;
     background: #fff;
@@ -71,7 +71,7 @@ body{
     float: right;
     color: #bfbfbf;
 }
-.grade>img{
+.grade1>img{
     width: .2rem;
     height: .2rem;
     margin-top: .125rem;
@@ -91,7 +91,7 @@ body{
     display: block;
 }
 /*脚部*/
-.footer{
+.p-footer{
     top: auto;
     bottom: 0;
     left: 0;
@@ -105,6 +105,6 @@ body{
     /*vertical-align: middle;*/
     text-align: center;
 }
-.footer a{
+.p-footer a{
     color: #3a3a3a;
 }

@@ -8,6 +8,9 @@ import VueLazyload from 'vue-lazyload'
 import store from './vuex/store'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+
+Vue.prototype.isShowFooter = true;
+Vue.prototype.check = false;
 Vue.config.productionTip = false;
 Vue.use(VueLazyload)
 Vue.use(VueAwesomeSwiper)
@@ -15,7 +18,24 @@ Vue.use(VueAwesomeSwiper)
 Vue.prototype.axios=axios
 
 router.beforeEach(function(f, to, next){
-	window.scrollTo(0, 0)
+	window.scrollTo(0, 0);
+	if(f.name == "detail" || f.name == "login" || f.name == "personal"){
+		Vue.prototype.isShowFooter = false
+
+
+	}else{
+		Vue.prototype.isShowFooter = true;
+
+	}
+	if( f.name == "mine"){
+
+		Vue.prototype.check = true
+
+	}else{
+
+		Vue.prototype.check = false
+	}
+
 	next();
 });
 /* eslint-disable no-new */

@@ -63,7 +63,7 @@
             <div class="item-0-3">
                 <img src="../assets/img/d5a7a60273915c0bba2909a503250e70.jpg" alt="">
             </div>
-            
+
             <div class="item-0-6" v-for="item in gan"  @click="checked(item)">
             <router-link to="/detail">
                 <div class="img-box">
@@ -76,7 +76,7 @@
                     <p class="pt">￥{{item.price}}/ <span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
                 </div>
             </div>
-            
+
 
             <div class="pan">
                 <div class="pans">
@@ -87,7 +87,7 @@
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
                     </div>
-                                    
+
                 </div>
             </div>
             <div class="bai">
@@ -96,7 +96,7 @@
             <div class="item-0-3">
                 <img src="../assets/img/bd068b464ae2bc65a16920b0cd5d06d7.jpg" alt="">
             </div>
-            
+
             <div class="item-0-6" v-for="item in cheng"  @click="checked(item)">
             <router-link to="/detail">
                 <div class="img-box">
@@ -110,22 +110,20 @@
                     <p class="pt ping">￥{{item.price}} / <span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
                 </div>
             </div>
-           
+
 
             <div class="pan">
-            
                 <div class="pans" id="pans2">
-                
                     <div class="" v-for="item in fruitList2"  @click="checked(item)">
                     <router-link to="/detail">
                         <img :src="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div> 
-                 
+                    </div>
+
                 </div>
-           
+
             </div>
             <div class="bai">
 
@@ -176,17 +174,17 @@
             </div>
 
             <div class="pan">
-           
+
                 <div class="pans">
-                 
+
                     <div class="" v-for="item in fruitList3"  @click="checked(item)">
                     <router-link to="/detail">
                         <img :src="item.image" alt="">
-                    </router-link> 
+                    </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
                     </div>
-                
+
                 </div>
             </router-link>
             </div>
@@ -197,40 +195,40 @@
 
             <div class="pan">
             <router-link to="/detail">
-                <div class="pans">               
+                <div class="pans">
                    <div class="" v-for="item in fruitList4"  @click="checked(item)">
                     <router-link to="/detail">
                         <img :src="item.image" alt="">
-                    </router-link> 
+                    </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div>                
+                    </div>
                 </div>
             </router-link>
             </div>
             <div class="pan">
-            
+
                 <div class="pans">
-                
+
                     <div class="" v-for="item in rouleiList"  @click="checked(item)">
                     <router-link to="/detail">
                         <img :src="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div> 
-                
+                    </div>
+
                 </div>
-           
+
             </div>
             <div class="kong">
                 <img src="../assets/img/c5467e16c05b0a225af66f9054e1fe2e.jpg" alt="">
             </div>
 
             <div class="pan">
-            
+
                 <div class="pans">
-                
+
                      <div class="" v-for="item in shucaiList" @click="checked(item)">
                         <router-link to="/detail">
                         <img :src="item.image" alt="">
@@ -238,28 +236,28 @@
                         </router-link>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
                     </div>
-                 
+
                 </div>
-          
+
             </div>
             <div class="item-0-3">
                 <img src="../assets/img/32743ce3f1138d565faf77093073117e.jpg" alt="">
             </div>
-           
+
             <div class="item-0-6" v-for="item in bottomList" @click="checked(item)">
                 <router-link to="/detail"  >
                 <div class="img-box">
                     <img :src="item.image" alt="">
                 </div>
-                </router-link> 
-                
+                </router-link>
+
                 <div class="desc">
                     <h5>{{item.title}}</h5>
                     <p>{{item.subtitle}}</p>
                     <p class="pt ping">￥{{item.price}} / <span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
                 </div>
-                
-            </div> 
+
+            </div>
 
         </div>
     </div>
@@ -267,7 +265,7 @@
 <script>
 
     export default{
-       
+
         data(){
             return {
                 flags:"",
@@ -287,14 +285,11 @@
                     loop: false,  //无限滚动
                     speed:300,//滑动速度
                     autoplay:1000,//自动切换的时间间隔
-                    onSlideChangeEnd: swiper => { //滑动之后回调函数
-                        //切换结束时，告诉我现在是第几个slide
-                        // console.log('onSlideChangeEnd', swiper.realIndex)
-                    }               
-                }   
+                  
+                }
             }
         },
-    
+
         created(){
             var _t=this;
             this.axios.all([this.get1(),this.get2()]).then(this.axios.spread(function(res1,res2){
@@ -306,7 +301,7 @@
             _t.fruitList4=res1.data.fruit4;
             _t.shucaiList=res1.data.shucai;
             _t.rouleiList=res1.data.roulei;
-            _t.bottomList=res2.data.content;            
+            _t.bottomList=res2.data.content;
             }))
         },
         methods:{

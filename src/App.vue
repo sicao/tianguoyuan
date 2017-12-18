@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <router-view/>
-    <div class="footer" v-if="this.proList!=0?false:true">
+    <div class="footer" v-show="isShowFooter">
       <router-link to="/home">
-        <i></i>
+        <i class='i1'></i>
         <span>首页</span>
       </router-link>
       <router-link to="/category">
-        <i></i>
+        <i class="i2"></i>
         <span>分类</span>
       </router-link>
       <router-link to="/cart">
         <em class="car" v-if="this.orderList.length>0?true:false">{{totalNum}}</em>
-        <i></i>
+        <i class="i3"></i>
         <span>购物车</span>
       </router-link>
-      <router-link to="/mine">
-        <i ></i>
+      <a :class="{active:check}" @click="judge()">
+        <i class="i4"></i>
         <span>我的果园</span>
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
@@ -35,6 +35,39 @@ export default{
     return{
       proList:[],
       orderList: []
+    }
+  },
+  methods:{
+     getCookie(name){
+		var cookie1 = document.cookie;
+
+		//user=tangcaiye; pass=12345; xx=343;
+		//user,tangcaiye; pass,12345
+		// 由于存放时是按照分号加一个空格进行划分的，所以在这里使用`; `作为分割符
+		var arr = cookie1.split("; ");
+
+		for (var i=0; i<arr.length; i++){
+			var arr2 = arr[i].split("=");
+			//arr2[0]->user,arr2[1]->tangcaiye;  arr2[0]->pass,
+			if (arr2[0]==name){
+				return arr2[1];
+			}
+		}
+  //alert(arr);
+		return false;
+	},
+    judge(){
+
+      if(this.getCookie("Token")){
+          this.$router.push({
+            path: "/mine"
+          })
+      }else{
+
+        this.$router.push({
+          path: "/login"
+        })
+      }
     }
   },
   computed:{
@@ -81,29 +114,44 @@ export default{
    display: block;
    width: .26rem;
    height: .22rem;
-   background: url(assets/img/footer1-1.jpg);
-   background-size: 100% 100%;
+   /*background-size: 100% 100%;*/
    text-align: center;
    margin:auto auto .01rem auto;
 
 }
-.footer a:nth-of-type(1) i{
+.i1{
+  background: url(assets/img/footer1-1.jpg) no-repeat center;
   width: .22rem;
 }
-.footer a:nth-of-type(2) i{
-  background: url(assets/img/footer2-1.jpg);
+.i2{
+  background: url(assets/img/footer2-1.jpg) no-repeat center;
     background-size: 100% 100%;
 }
-.footer a:nth-of-type(3) i{
-  background: url(assets/img/footer3-1.jpg);
+.i3{
+  background: url(assets/img/footer3-1.jpg) no-repeat center;
   background-size: 100% 100%;
 }
-.footer a:nth-of-type(4) i{
-  /*background: url(assets/img/footer4-2.jpg);*/
-  background-size: 100% 100%;
+.i4{
+  background: url(assets/img/footer4-1.jpg) no-repeat center;
+
   width: .19rem;
 }
-.footer a:nth-of-type(4){
+.router-link-active .i1{
+  background: url(assets/img/footer1-2.jpg) no-repeat center;
+}
+.router-link-active .i2{
+  background: url(assets/img/footer2-2.jpg) no-repeat center;
+}
+.router-link-active .i3{
+  background: url(assets/img/footer3-2.jpg) no-repeat center;
+}
+.active .i4{
+  background: url(assets/img/footer4-2.jpg) no-repeat center;
+}
+.active span{
+    color: #65a032;
+}
+.router-link-active span{
   color: #65a032;
 }
 .car{

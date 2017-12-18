@@ -90,7 +90,7 @@
 	background: url(../img/border.png);
 	position: absolute;
 	left: 0;
-	
+
 }
 .span1{
 	top:0;
@@ -124,7 +124,7 @@
 	font-family: "宋体";
 	font-size: .17rem;
 	color: #bfbfbf;
-	font-weight: bold;	
+	font-weight: bold;
 }
 .list-item{
 	margin:.1rem 0;
@@ -144,7 +144,7 @@
 .list-item ul{
 	width: 100%;
 	height: auto;
-	overflow: 
+	overflow:
 }
 .list-item ul li{
 	position: relative;
@@ -224,7 +224,7 @@
     margin-top:0.37rem;
     /*border: .01rem solid #bfbfbf;*/
     /*background: #fff;*/
-    background-color:#ff8000; 
+    background-color:#ff8000;
     color: #fff;
     font-size: .12rem;
     border-radius: 100%;
@@ -249,7 +249,7 @@
     font-size: .1rem;
     line-height: .15rem;
     color: #878787
-}  
+}
     .pro-info p{
     	font-size: .12rem;
     	color: #bfbfbf
@@ -269,9 +269,9 @@
     	padding: .015rem;
     	border-radius: .02rem
     }
-  
+
     .address-prop{
-    	z-index: 9;
+    	z-index: 11;
     	height: 4.45rem;
     	width: 100%;
     	background-color: #fff;
@@ -329,7 +329,7 @@
 	position: fixed;
 	display: flex;
 	bottom:0.42rem;
-	left: 0;   
+	left: 0;
 	height: .5rem;
 	width: 100%;
     box-shadow: 0 -0.02rem 0.02rem 0 rgba(0,0,0,.15);
@@ -346,13 +346,13 @@
     border-radius: 100%;
     line-height: .14rem;
     text-align: center;
-  
+
 }
 .bottom>span{
 	font-size: .12rem;
 	color: #878787;
 	margin: auto 0;
-	
+
 }
 .btn{
 	float:right;

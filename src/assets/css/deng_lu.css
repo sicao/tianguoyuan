@@ -8,15 +8,15 @@ body{
     margin: 0;
     font-size: .14rem;
     background: #f5f5f5;
-    font-weight: 300; 
+    font-weight: 300;
     background: url(../img/login-bg.png) no-repeat 0 0;
-    background-size: 100% auto;  
+    background-size: 100% auto;
 }
 input{
     outline: none;
 }
 /*头部*/
-.nav{   
+.nav4{
     color: #75a739;
     height: .45rem;
     line-height: .43rem;
@@ -24,14 +24,14 @@ input{
     top: 0;
     left: 0;
     width: 100%;
-    display: -webkit-box;    
-    display: box;   
+    display: -webkit-box;
+    display: box;
 }
-.back{
+.back4{
     width: .88rem;
     display: inline-block;
 }
-.back>a{
+.back4>a{
     text-align: center;
     padding-left: .07rem;
     float: left;
@@ -41,42 +41,41 @@ input{
     font-family: 宋体;
     font-weight: bold;
 }
-.text{
+.text4{
     text-indent: .4rem;
     font-size: .17rem;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;width:100%;
+    text-overflow: ellipsis;
+		width:100%;
 }
 
 /*身体登陆的form表单*/
-.DL-form{
-    top: 50%;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    position: absolute;
-    margin-top: -1.35rem;
+.DL-form,.phone-DL{
+		transition: all .5s;
+    margin-top: 2.2rem;
     width: 84%;
     padding: 0 8%;
+		box-sizing: content-box;
+
 }
 .DL-formin{
     width: 100%;
     height: .25rem;
     padding: .08rem 0;
     margin: .1rem 0;
+		box-sizing: content-box;
     border-bottom: .01rem solid #d8d8d8;
-    color: 
-
 }
 .phone_pic,.yan_zm,.phone-password{
-    display:inline-block;    
-    margin-right: .1rem;  
+    display:inline-block;
+    margin-right: .1rem;
     width:.18rem;
-    height:.22rem;  
-    background: url(../img/phone.bmp);
+    height:.22rem;
+    background: url(../img/phone.jpg);
     background-size: 100% 100%;
     float: left;
+		box-sizing: content-box;
 }
 .phonein{
     float: left;
@@ -92,6 +91,7 @@ input{
     border: none;
     display: inline-block;
     float: left;
+		box-sizing: content-box;
 }
 .DL-formin>span{
     display: inline-block;
@@ -104,9 +104,10 @@ input{
     font-size: .12rem;
     color: #fff;
     text-align: center;
+		box-sizing: content-box;
 }
 .yan_zm{
-    background: url(../img/yan_zm.bmp);
+    background: url(../img/yan_zm.jpg);
     background-size: 100% 100%;
 }
 .tips{
@@ -119,7 +120,7 @@ input{
     display: block;
     width: 100%;
     height: .4rem;
-    margin: .5rem 0 .15rem;
+    margin: .45rem 0 .15rem;
     border-radius: .02rem;
     line-height: .4rem;
     font-size: .16rem;
@@ -127,20 +128,20 @@ input{
     text-align: center;
     background: #bfbfbf;
 }
-.tab a{
+.tab4 a{
     color: #f93;
-    font-size: .12rem;   
+    font-size: .12rem;
 }
-.tab a:nth-of-type(1){     
+.tab4 a:nth-of-type(1){
     float: left;
 }
-.tab a:nth-of-type(2){    
+.tab4 a:nth-of-type(2){
     float: right;
 }
 .phone-password{
-    background: url(../img/phone-password.bmp);
-    background-size: 100% 100%; 
+    background: url(../img/phone-password.jpg);
+    background-size: 100% 100%;
 }
-.phone-DL{
-    display: none;    
+.active1{
+	background-color: #f93;
 }

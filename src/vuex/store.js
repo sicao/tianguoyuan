@@ -39,12 +39,8 @@ export default  new Vuex.Store({
 			});
 		},
 		add_pro(state,item){
-			state.proList.push(item)
-		},
-		empty_pro(state){
-		state.proList.splice(0,1)
+			state.proList.splice(0,1,item)
 		}
-
 	},
 	actions: {
 		addOrder({commit}, item){
@@ -55,9 +51,6 @@ export default  new Vuex.Store({
 		},
 		addPro({commit},item){
 			commit("add_pro", item);
-		},
-		empty({commit}){
-			commit("empty_pro")
 		}
 	},
 	getters: {

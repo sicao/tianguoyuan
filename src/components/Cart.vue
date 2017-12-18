@@ -11,7 +11,7 @@
 			<img src="../assets/img/car.png">
 			<div>还没找到心仪的商品吗?</div>
 			<p>去逛逛吧</p>
-		</div> 
+		</div>
 		<div class="content">
 			<div class="address" @click="changeStyle($event)">
 				<span class="span1"></span>
@@ -95,7 +95,7 @@
 				flags:"",
 				show:false,
 				flag:true,
-				total:69.8,		
+				total:69.8,
 			}
 		},
 		methods:{
@@ -109,10 +109,10 @@
 
 					if(f)this.$store.dispatch("minusOrder", item);
 				}
-			},				
+			},
 			changeStyle:function(e){
 				document.querySelector(".address-prop").style.bottom=0;
-				this.show=true;			
+				this.show=true;
 			},
 			close:function(){
 				this.show=false;
@@ -127,7 +127,7 @@
 					e.currentTarget.style.backgroundColor="#ff8000";
 					e.currentTarget.style.border="none";
 					this.flag=true;
-				}				
+				}
 			}
 		},
 		computed:{
@@ -142,6 +142,6 @@
 		}
 	}
 </script>
-<style scoped>
+<style >
 	@import '../assets/css/car.css'
 </style>
