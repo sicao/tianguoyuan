@@ -1,7 +1,7 @@
 <template>
   <div>
   <div class="nav4">
-    <div class="back4"><a href="###"><</a></div>
+    <div class="back4" @click="back()"><a href="###"><</a></div>
     <div class="text4">手机号快捷登陆</div>
   </div>
   <div class="formbox">
@@ -84,6 +84,9 @@
           }
         },
         methods:{
+            back(){
+              history.back()
+            },
             setCookie(name,value,day){
                 var date1 = new Date();
                 var nowDate = date1.getDate();

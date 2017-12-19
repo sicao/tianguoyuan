@@ -14,6 +14,7 @@ export default  new Vuex.Store({
 	state: {
 		orderList:[],
 		proList:[],
+		isshowlogin:false
 
 	},
 	mutations: {

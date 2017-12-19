@@ -39,20 +39,19 @@ export default{
   },
   methods:{
      getCookie(name){
-		var cookie1 = document.cookie;
+		    var cookie1 = document.cookie;
 
-		//user=tangcaiye; pass=12345; xx=343;
-		//user,tangcaiye; pass,12345
-		// 由于存放时是按照分号加一个空格进行划分的，所以在这里使用`; `作为分割符
-		var arr = cookie1.split("; ");
-
-		for (var i=0; i<arr.length; i++){
-			var arr2 = arr[i].split("=");
-			//arr2[0]->user,arr2[1]->tangcaiye;  arr2[0]->pass,
-			if (arr2[0]==name){
-				return arr2[1];
-			}
-		}
+    		//user=tangcaiye; pass=12345; xx=343;
+    		//user,tangcaiye; pass,12345
+    		// 由于存放时是按照分号加一个空格进行划分的，所以在这里使用`; `作为分割符
+		    var arr = cookie1.split("; ");
+		    for (var i=0; i<arr.length; i++){
+			  var arr2 = arr[i].split("=");
+			  //arr2[0]->user,arr2[1]->tangcaiye;  arr2[0]->pass,
+			  if (arr2[0]==name){
+				    return arr2[1];
+			  }
+		  }
   //alert(arr);
 		return false;
 	},
@@ -95,7 +94,7 @@ export default{
     font-size: .1rem;
     line-height: 1.2;
     vertical-align: middle;
-    z-index: 9
+    z-index: 4
 }
 .footer a{
   position: relative;
@@ -110,7 +109,7 @@ export default{
     padding: .03rem 0;
 
 }
-  .footer a i{
+.footer a i{
    display: block;
    width: .26rem;
    height: .22rem;

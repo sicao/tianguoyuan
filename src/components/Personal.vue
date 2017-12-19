@@ -46,7 +46,6 @@ export default{
          //user,tangcaiye; pass,12345
          // 由于存放时是按照分号加一个空格进行划分的，所以在这里使用`; `作为分割符
          var arr = cookie1.split("; ");
-
          for (var i=0; i<arr.length; i++){
            var arr2 = arr[i].split("=");
            //arr2[0]->user,arr2[1]->tangcaiye;  arr2[0]->pass,
@@ -65,14 +64,11 @@ export default{
       },
       exit(){
           this.setCookie("Token","",-1);
-          this.$router.push({path: "/login"})
+          this.$router.push({path: "/home"})
       },
       back(){
         history.back();
-
       }
-
-
     }
 }
 

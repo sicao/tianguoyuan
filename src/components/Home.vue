@@ -1,6 +1,10 @@
 <template>
 
 	<div class="home">
+		<div class="bg" v-show="isShowLoading">
+				<vue-loading type="bubbles" color="#ff8000" :size="{width:'50px',height:'50px'}" ></vue-loading>
+		</div>
+		<Nologin v-show="isshowlogin"></Nologin>
  		<div class="header fixed">
             <div class="position">
                 <div class="arri-time">
@@ -18,9 +22,11 @@
                     <img src="../assets/img/tu.jpg" alt="">
                 </div>
             </div>
+						<router-link to="/search" >
             <div class="jing">
-                <a href="###"><img src="../assets/img/jing.png" alt=""></a>
+                <img src="../assets/img/jing.png" alt="">
             </div>
+						</router-link>
         </div>
 		<div class="main" v-if="gan.length>0">
         <div class="lun">
@@ -263,12 +269,17 @@
     </div>
 </template>
 <script>
-
+		import vueLoading from 'vue-loading-template'
+		import Nologin from './nologin'
     export default{
-
+				components:{
+					Nologin,
+					vueLoading
+				},
         data(){
             return {
                 flags:"",
+								isShowLoading:true,
                 cheng:[],
                 gan:[],
                 orderList:[],
@@ -285,31 +296,61 @@
                     loop: false,  //无限滚动
                     speed:300,//滑动速度
                     autoplay:1000,//自动切换的时间间隔
-                  
+
                 }
             }
         },
-
+				computed: {
+					isshowlogin () {
+						return this.$store.state.isshowlogin
+					}
+				},
         created(){
             var _t=this;
-            this.axios.all([this.get1(),this.get2()]).then(this.axios.spread(function(res1,res2){
-            _t.cheng=res1.data.cheng;
-            _t.gan=res1.data.gan;
-            _t.fruitList1=res1.data.fruit1;
-            _t.fruitList2=res1.data.fruit2;
-            _t.fruitList3=res1.data.fruit3;
-            _t.fruitList4=res1.data.fruit4;
-            _t.shucaiList=res1.data.shucai;
-            _t.rouleiList=res1.data.roulei;
-            _t.bottomList=res2.data.content;
-            }))
+						setTimeout(function() {
+							_t.axios.all([_t.get1(),_t.get2()]).then(_t.axios.spread(function(res1,res2){
+
+							_t.cheng=res1.data.cheng;
+							_t.gan=res1.data.gan;
+							_t.fruitList1=res1.data.fruit1;
+							_t.fruitList2=res1.data.fruit2;
+							_t.fruitList3=res1.data.fruit3;
+							_t.fruitList4=res1.data.fruit4;
+							_t.shucaiList=res1.data.shucai;
+							_t.rouleiList=res1.data.roulei;
+							_t.bottomList=res2.data.content;
+							_t.isShowLoading=false;
+							}))
+						},1000)
+
         },
         methods:{
+					getCookie(name){
+						 var cookie1 = document.cookie;
+						 //user=tangcaiye; pass=12345; xx=343;
+						 //user,tangcaiye; pass,12345
+						 // 由于存放时是按照分号加一个空格进行划分的，所以在这里使用`; `作为分割符
+						 var arr = cookie1.split("; ");
+						 for (var i=0; i<arr.length; i++){
+							 var arr2 = arr[i].split("=");
+							 //arr2[0]->user,arr2[1]->tangcaiye;  arr2[0]->pass,
+							 if (arr2[0]==name){
+									 return arr2[1];
+							 }
+						 }
+						 return false;
+				 	},
             add(item){
-                this.$store.dispatch("addOrder", item);
+								if(this.getCookie("Token")){
+									this.$store.dispatch("addOrder", item);
+								}else{
+									this.$store.state.isshowlogin=true;
+
+								}
             },
             checked(item){
                 this.$store.dispatch("addPro", item);
+
             },
             get1:function(){
             return this.axios.get("../static/data.json");

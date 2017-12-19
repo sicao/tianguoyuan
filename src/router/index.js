@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
+
 import Home from '@/components/Home'
 import Category from '@/components/Category'
+import Search from '@/components/Search'
 
 
 import Cart from '@/components/Cart'
@@ -62,6 +63,11 @@ export default new Router({
       path:'/citybox',
       name:'citybox',
       component:Citybox
+    },
+    {
+      path:'/search',
+      name:'search',
+      component:Search
     }
   ]
 })
