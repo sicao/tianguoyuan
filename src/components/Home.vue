@@ -73,7 +73,7 @@
             <div class="item-0-6" v-for="item in gan"  @click="checked(item)" :key="item.id">
             <router-link to="/detail">
                 <div class="img-box">
-                    <img :src="item.image" alt="">
+                    <img v-lazy="item.image" alt="">
                 </div>
             </router-link>
                 <div class="desc" >
@@ -84,9 +84,9 @@
             </div>
             <div class="pan">
                 <swiper :options="swiperOption_H" class="pans">
-                    <swiperSlide v-for="item in fruitList1"  @click="checked(item)" :key="item.id">
+                    <swiperSlide v-for="item in fruitList1" :key="item.id">
                         <router-link to="/detail">
-                            <img :src="item.image" alt="">
+                            <img @click="checked(item)" :src="item.image" alt="">
                         </router-link>
                             <p class="yun">{{item.title}}</p>
                             <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
@@ -104,7 +104,7 @@
             <div class="item-0-6" v-for="item in cheng"  @click="checked(item)"  :key="item.id">
             <router-link to="/detail">
                 <div class="img-box">
-                    <img :src="item.image" alt="">
+                    <img v-lazy="item.image" alt="">
                 </div>
             </router-link>
                 <div class="desc" >
@@ -117,9 +117,9 @@
 
             <div class="pan">
                 <swiper :options="swiperOption_H" class="pans">
-                    <swiperSlide v-for="item in fruitList2"  @click="checked(item)" :key="item.id">
+                    <swiperSlide v-for="item in fruitList2" :key="item.id">
                     <router-link to="/detail">
-                        <img :src="item.image" alt="">
+                        <img  @click="checked(item)" v-lazy="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
@@ -176,9 +176,9 @@
             </div>
             <div class="pan">
                 <swiper class="pans" :options="swiperOption_H">
-                    <swiper-slide class="" v-for="item in fruitList3"  @click="checked(item)" :key="item.id">
+                    <swiper-slide class="" v-for="item in fruitList3" :key="item.id">
                     <router-link to="/detail">
-                        <img :src="item.image" alt="">
+                        <img  @click="checked(item)" v-lazy="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
@@ -193,9 +193,9 @@
             <div class="pan">
             
                 <swiper class="pans" :options="swiperOption_H">
-                   <swiper-slide class="" v-for="item in fruitList4"  @click="checked(item)"  :key="item.id">
+                   <swiper-slide class="" v-for="item in fruitList4" :key="item.id">
                     <router-link to="/detail">
-                        <img :src="item.image" alt="">
+                        <img  @click="checked(item)"  v-lazy="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
@@ -207,9 +207,9 @@
 
                 <swiper class="pans" :options="swiperOption_H">
 
-                    <swiper-slide class="" v-for="item in rouleiList"  @click="checked(item)"  :key="item.id">
+                    <swiper-slide class="" v-for="item in rouleiList" :key="item.id">
                     <router-link to="/detail">
-                        <img :src="item.image" alt="">
+                        <img  @click="checked(item)"  v-lazy="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
@@ -226,9 +226,9 @@
 
                 <swiper class="pans" :options="swiperOption_H">
 
-                     <swiper-slide class="" v-for="item in shucaiList" @click="checked(item)" :key="item.id">
+                     <swiper-slide class="" v-for="item in shucaiList" :key="item.id">
                         <router-link to="/detail">
-                        <img :src="item.image" alt="">
+                        <img @click="checked(item)" v-lazy="item.image" alt="">
                         <p class="yun">{{item.title}}</p>
                         </router-link>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
@@ -244,7 +244,7 @@
             <div class="item-0-6" v-for="item in bottomList" @click="checked(item)" :key="item.id">
                 <router-link to="/detail"  >
                 <div class="img-box">
-                    <img :src="item.image" alt="">
+                    <img v-lazy="item.image" alt="">
                 </div>
                 </router-link>
 
