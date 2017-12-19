@@ -14,7 +14,7 @@
 				<h2>{{name}}<span class="more">全部 <i>></i></span></h2>
 				<div class="items">
 					<dl v-for="item in class3Group" :key="item.id">
-						<dt><img :src="item.class_photo"></dt>
+						<dt><img v-lazy="item.class_photo"></dt>
 						<dd>{{item.name}}</dd>
 					</dl>
 				</div>
