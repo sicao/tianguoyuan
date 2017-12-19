@@ -234,6 +234,13 @@
                 </div>
             </div>
         </div>
+        <!-- 回到顶部 -->
+        <section  @click="totop()" class="topscroll" v-show="flag">
+        <div class="top-bg" style="display: block;"></div>
+        <div class="index-top-wrap" style="display: block;">
+            <div class="top-cont">顶部</div>
+        </div>
+        </section>
     </div>
 </template>
 <script>
@@ -272,7 +279,8 @@
                 },
                 swiperOption_H:{
                     slidesPerView: 3.2
-                }
+                },
+                flag:false
             }
         },
         computed: {
@@ -332,6 +340,26 @@
             },
             get2:function(){
             return this.axios.get("../static/bottom.json");
+            },
+            totop(){
+                var topInterval = setInterval(function () {
+                    var a =window.scrollY, t = 15;
+                        a = a- t;
+                        document.body.scrollTop = document.documentElement.scrollTop=  a ;
+                        if( a <= 0){
+                            clearInterval(topInterval);
+                        }
+                },1);
+            }
+        },
+        mounted() {
+            var that = this;
+            window.onscroll = function (){
+                if (window.scrollY>700) {
+                that.flag = true;
+                }else{
+                that.flag = false;
+                }
             }
         }
     }

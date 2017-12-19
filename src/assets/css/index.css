@@ -259,5 +259,34 @@ body{
 .kong img{
     width: 100%;
 }
+/* 回到顶部 */
+.index-top-wrap, .top-bg {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 1rem;
+    z-index: 3;
+    right: .3rem;
+}
+.top-cont {
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: .25rem;
+    box-sizing: border-box;
+    background: url(../img/topIcon.png) no-repeat center .05rem;
+    background-size: .35rem .28rem;
+    color: #fff;
+    font-size: 0.12rem;
+    text-align: center;
+    line-height: .3rem;
+}
+.top-bg {
+    background-color: #000;
+    opacity: .5;
+}
 
 /*底部*/
