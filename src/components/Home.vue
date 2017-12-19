@@ -70,7 +70,7 @@
                 <img src="../assets/img/d5a7a60273915c0bba2909a503250e70.jpg" alt="">
             </div>
 
-            <div class="item-0-6" v-for="item in gan"  @click="checked(item)">
+            <div class="item-0-6" v-for="item in gan"  @click="checked(item)" :key="item.id">
             <router-link to="/detail">
                 <div class="img-box">
                     <img :src="item.image" alt="">
@@ -82,20 +82,18 @@
                     <p class="pt">￥{{item.price}}/ <span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
                 </div>
             </div>
-
-
             <div class="pan">
-                <div class="pans">
-                    <div class="" v-for="item in fruitList1"  @click="checked(item)">
-                    <router-link to="/detail">
-                        <img :src="item.image" alt="">
-                    </router-link>
-                        <p class="yun">{{item.title}}</p>
-                        <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div>
-
-                </div>
+                <swiper :options="swiperOption_H" class="pans">
+                    <swiperSlide v-for="item in fruitList1"  @click="checked(item)" :key="item.id">
+                        <router-link to="/detail">
+                            <img :src="item.image" alt="">
+                        </router-link>
+                            <p class="yun">{{item.title}}</p>
+                            <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
+                    </swiperSlide>
+                </swiper>
             </div>
+
             <div class="bai">
 
             </div>
@@ -103,7 +101,7 @@
                 <img src="../assets/img/bd068b464ae2bc65a16920b0cd5d06d7.jpg" alt="">
             </div>
 
-            <div class="item-0-6" v-for="item in cheng"  @click="checked(item)">
+            <div class="item-0-6" v-for="item in cheng"  @click="checked(item)"  :key="item.id">
             <router-link to="/detail">
                 <div class="img-box">
                     <img :src="item.image" alt="">
@@ -117,19 +115,17 @@
                 </div>
             </div>
 
-
             <div class="pan">
-                <div class="pans" id="pans2">
-                    <div class="" v-for="item in fruitList2"  @click="checked(item)">
+                <swiper :options="swiperOption_H" class="pans">
+                    <swiperSlide v-for="item in fruitList2"  @click="checked(item)" :key="item.id">
                     <router-link to="/detail">
                         <img :src="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div>
+                    </swiperSlide>
 
-                </div>
-
+                </swiper>
             </div>
             <div class="bai">
 
@@ -178,21 +174,16 @@
             <div class="kong">
                 <img src="../assets/img/9b5771d6e66986b73662bca0c0cff69c.jpg" alt="">
             </div>
-
             <div class="pan">
-
-                <div class="pans">
-
-                    <div class="" v-for="item in fruitList3"  @click="checked(item)">
+                <swiper class="pans" :options="swiperOption_H">
+                    <swiper-slide class="" v-for="item in fruitList3"  @click="checked(item)" :key="item.id">
                     <router-link to="/detail">
                         <img :src="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div>
-
-                </div>
-            </router-link>
+                    </swiper-slide>
+                </swiper>
             </div>
 
             <div class="kong">
@@ -200,31 +191,31 @@
             </div>
 
             <div class="pan">
-            <router-link to="/detail">
-                <div class="pans">
-                   <div class="" v-for="item in fruitList4"  @click="checked(item)">
+            
+                <swiper class="pans" :options="swiperOption_H">
+                   <swiper-slide class="" v-for="item in fruitList4"  @click="checked(item)"  :key="item.id">
                     <router-link to="/detail">
                         <img :src="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div>
-                </div>
-            </router-link>
+                    </swiper-slide>
+                </swiper>
+          
             </div>
             <div class="pan">
 
-                <div class="pans">
+                <swiper class="pans" :options="swiperOption_H">
 
-                    <div class="" v-for="item in rouleiList"  @click="checked(item)">
+                    <swiper-slide class="" v-for="item in rouleiList"  @click="checked(item)"  :key="item.id">
                     <router-link to="/detail">
                         <img :src="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div>
+                    </swiper-slide>
 
-                </div>
+                </swiper>
 
             </div>
             <div class="kong">
@@ -233,24 +224,24 @@
 
             <div class="pan">
 
-                <div class="pans">
+                <swiper class="pans" :options="swiperOption_H">
 
-                     <div class="" v-for="item in shucaiList" @click="checked(item)">
+                     <swiper-slide class="" v-for="item in shucaiList" @click="checked(item)" :key="item.id">
                         <router-link to="/detail">
                         <img :src="item.image" alt="">
                         <p class="yun">{{item.title}}</p>
                         </router-link>
                         <p class="shi">￥{{item.price}}/<span>{{item.volume}}</span><img @click.stop="add(item)" src="../assets/img/jia.jpg" alt=""></p>
-                    </div>
+                    </swiper-slide>
 
-                </div>
+                </swiper>
 
             </div>
             <div class="item-0-3">
                 <img src="../assets/img/32743ce3f1138d565faf77093073117e.jpg" alt="">
             </div>
 
-            <div class="item-0-6" v-for="item in bottomList" @click="checked(item)">
+            <div class="item-0-6" v-for="item in bottomList" @click="checked(item)" :key="item.id">
                 <router-link to="/detail"  >
                 <div class="img-box">
                     <img :src="item.image" alt="">
@@ -269,17 +260,21 @@
     </div>
 </template>
 <script>
+        // import 'swiper/dist/css/swiper.css'
+        import { swiper, swiperSlide } from 'vue-awesome-swiper'
 		import vueLoading from 'vue-loading-template'
 		import Nologin from './nologin'
     export default{
 				components:{
 					Nologin,
-					vueLoading
+                    vueLoading,
+                    swiper,
+                    swiperSlide
 				},
         data(){
             return {
                 flags:"",
-								isShowLoading:true,
+				isShowLoading:true,
                 cheng:[],
                 gan:[],
                 orderList:[],
@@ -297,6 +292,9 @@
                     speed:300,//滑动速度
                     autoplay:1000,//自动切换的时间间隔
 
+                },
+                swiperOption_H:{
+                    slidesPerView: 3.2
                 }
             }
         },

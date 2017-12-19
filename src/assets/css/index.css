@@ -176,7 +176,7 @@ body{
     margin-bottom: .1rem;
 }
 .pan .pans{
-    width: 300%;
+    /* width: 300%; */
     overflow: hidden;
     margin-bottom: .19rem;
 }
@@ -189,9 +189,9 @@ body{
     max-width: 1rem;
     /*height: 1rem*/
 }
-#pans2{
+/* #pans2{
 width: 500%;
-}
+} */
 .pan .pans div img{
     width: 100%;
 }
