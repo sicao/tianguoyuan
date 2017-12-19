@@ -53,7 +53,7 @@
                 marTop = parseInt(box[key].offsetTop)-44;
               }
           })
-          document.body.scrollTop = marTop ;
+          document.body.scrollTop = document.documentElement.scrollTop=  marTop ;
         }
     },
     created(){
