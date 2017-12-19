@@ -40,9 +40,6 @@
                         <img class="side" src="https://imgjd5.fruitday.com/images/2017-11-16/096549a428561579a22bf9605a319ee4.jpg">
                     </swiper-slide>
                     <div class="swiper-pagination"  slot="pagination"></div>
-                    <div class="swiper-button-prev" slot="button-prev"></div>
-                    <div class="swiper-button-next" slot="button-next"></div>
-                    <!-- <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
                 </swiper>
             </div>
             <div class="item">
@@ -270,12 +267,15 @@
                 rouleiList:[],
                 bottomList:[],
                 swiperOption: {
-                    initialSlide:0,//设定初始化时slide的索引
-                    direction:'horizontal',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)。
-                    loop: false,  //无限滚动
-                    speed:300,//滑动速度
-                    autoplay:1000,//自动切换的时间间隔
-
+                    autoplay: {
+                        stopOnLastSlide: false, 
+                        disableOnInteraction: false
+                    },
+                    pagination: {
+                    el: '.swiper-pagination',
+                    clickable :true
+                    },
+                    loop : true
                 },
                 swiperOption_H:{
                     slidesPerView: 3.2
