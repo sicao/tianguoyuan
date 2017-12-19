@@ -2,10 +2,15 @@
    background:#fff;
 }
 #citybox h2{
+    width: 100%;
+    height: .44rem;
     line-height: .44rem;
     font-size: .16rem;
     text-align: center;
-    position: relative;
+    position: fixed;
+    background:#fff;
+    top: 0;
+    left: 0;
 }
 #citybox h2 a{
   float: left;
@@ -18,6 +23,9 @@
 }
 #citybox h2 a img{
   width: 100%
+}
+.mainTab{
+  margin-top:.44rem; 
 }
 .ctlist {
   width: 100%;

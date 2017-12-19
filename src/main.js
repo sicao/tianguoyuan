@@ -29,7 +29,7 @@ Vue.prototype.axios=axios
 
 router.beforeEach(function(f, to, next){
 	window.scrollTo(0, 0);
-	if(f.name == "detail" || f.name == "login" || f.name == "personal"){
+	if(f.name == "detail" || f.name == "login" || f.name == "personal" || f.name == "citybox"){
 		Vue.prototype.isShowFooter = false
 
 
