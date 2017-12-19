@@ -8,7 +8,7 @@
 		</header>
 		<div class="content1">
 			<ul class="tab">
-				<li v-for="(item,index) in classOneGroup" :key="item.id" @click="show(index)">{{item.name}}</li>
+				<li :class="{active:index==itemIndex}" v-for="(item,index) in classOneGroup" :key="item.id" @click="show(index)">{{item.name}}</li>
 			</ul>
 			<div class="item" >
 				<h2>{{name}}<span class="more">全部 <i>></i></span></h2>
