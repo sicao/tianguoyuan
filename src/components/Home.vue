@@ -71,7 +71,7 @@
             </div>
 
             <div class="item-0-6" v-for="item in gan"  @click="checked(item)" :key="item.id">
-            <router-link to="/detail">
+            <router-link :to="'/detail/' + item.banner_ad_id">
                 <div class="img-box">
                     <img v-lazy="item.image" alt="">
                 </div>
@@ -85,7 +85,7 @@
             <div class="pan">
                 <swiper :options="swiperOption_H" class="pans">
                     <swiperSlide v-for="item in fruitList1" :key="item.id">
-                        <router-link to="/detail">
+                        <router-link :to="'/detail/' + item.banner_ad_id">
                             <img @click="checked(item)" :src="item.image" alt="">
                         </router-link>
                             <p class="yun">{{item.title}}</p>
@@ -102,7 +102,7 @@
             </div>
 
             <div class="item-0-6" v-for="item in cheng"  @click="checked(item)"  :key="item.id">
-            <router-link to="/detail">
+            <router-link :to="'/detail/' + item.banner_ad_id">
                 <div class="img-box">
                     <img v-lazy="item.image" alt="">
                 </div>
@@ -118,7 +118,7 @@
             <div class="pan">
                 <swiper :options="swiperOption_H" class="pans">
                     <swiperSlide v-for="item in fruitList2" :key="item.id">
-                    <router-link to="/detail">
+                    <router-link :to="'/detail/' + item.banner_ad_id">
                         <img  @click="checked(item)" v-lazy="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
@@ -177,7 +177,7 @@
             <div class="pan">
                 <swiper class="pans" :options="swiperOption_H">
                     <swiper-slide class="" v-for="item in fruitList3" :key="item.id">
-                    <router-link to="/detail">
+                    <router-link :to="'/detail/' + item.banner_ad_id">
                         <img  @click="checked(item)" v-lazy="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
@@ -194,7 +194,7 @@
             
                 <swiper class="pans" :options="swiperOption_H">
                    <swiper-slide class="" v-for="item in fruitList4" :key="item.id">
-                    <router-link to="/detail">
+                    <router-link :to="'/detail/' + item.banner_ad_id">
                         <img  @click="checked(item)"  v-lazy="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
@@ -208,7 +208,7 @@
                 <swiper class="pans" :options="swiperOption_H">
 
                     <swiper-slide class="" v-for="item in rouleiList" :key="item.id">
-                    <router-link to="/detail">
+                    <router-link :to="'/detail/' + item.banner_ad_id">
                         <img  @click="checked(item)"  v-lazy="item.image" alt="">
                     </router-link>
                         <p class="yun">{{item.title}}</p>
@@ -227,7 +227,7 @@
                 <swiper class="pans" :options="swiperOption_H">
 
                      <swiper-slide class="" v-for="item in shucaiList" :key="item.id">
-                        <router-link to="/detail">
+                        <router-link :to="'/detail/' + item.banner_ad_id">
                         <img @click="checked(item)" v-lazy="item.image" alt="">
                         <p class="yun">{{item.title}}</p>
                         </router-link>
@@ -242,7 +242,7 @@
             </div>
 
             <div class="item-0-6" v-for="item in bottomList" @click="checked(item)" :key="item.id">
-                <router-link to="/detail"  >
+                <router-link :to="'/detail/' + item.banner_ad_id">
                 <div class="img-box">
                     <img v-lazy="item.image" alt="">
                 </div>
