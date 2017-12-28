@@ -2,7 +2,7 @@
   <div id="citybox">
      <div class="ctright">
            <p>
-             <a href="#" v-for="item in allword" :key="item.id" @click.prevent="check(item, $event)">
+             <a href="#" v-for="item in allword" :key="item.id" @click.prevent="check(item)">
                       {{item}}
              </a>
            </p>
@@ -46,9 +46,11 @@
        }
      },
      methods:{
-        check: function (item, event){
+        check: function (item){
+           console.log(item);
           var box = document.querySelectorAll('.ind'), marTop;
-          Object.keys(box).forEach(function (key, dex, arr) {
+          Object.keys(box).forEach(function (key) {
+            console.log(key);
               if(box[key].innerText == item) {
                 marTop = parseInt(box[key].offsetTop)-44;
               }
